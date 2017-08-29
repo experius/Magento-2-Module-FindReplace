@@ -85,7 +85,7 @@ class Findreplace extends Command
             $result = $this->connection->query("SELECT `{$column}` FROM `{$tableName}` WHERE `{$column}` LIKE '%{$find}%'");
             $this->output->writeln(sprintf("%d values would be replaced with this command in the %s column",$result->rowCount(),$column));
         } else {
-            $result = $this->connection->query("UPDATE `{$tableName}` SET `{$column}` = REPLACE(`from_url`,'{$find}','{$replace}') WHERE `{$column}` LIKE '%{$find}%'");
+            $result = $this->connection->query("UPDATE `{$tableName}` SET `{$column}` = REPLACE(`{$column}`,'{$find}','{$replace}') WHERE `{$column}` LIKE '%{$find}%'");
             $this->output->writeln(sprintf("%d values replaced in the %s column",$result->rowCount(),$column));
         }
 
