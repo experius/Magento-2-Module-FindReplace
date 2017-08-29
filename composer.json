@@ -1,0 +1,21 @@
+{
+    "name": "experius/module-findreplace",
+    "description": "",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Experius\\FindReplace\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
